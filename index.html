@@ -15,10 +15,11 @@
 <body>
   <header>
     <nav>
-      <div class="container">
-        <h1 class="logo"><a href="index.html">Power Massage</a></h1>
+      <div id="sticky" class="container">
+        <h1 class="logo"><a href="#" onclick="slowScroll('#about-info')" >Power Massage</a></h1>
         <ul>
-          <li><a href="#" onclick="slowScroll('#home-info')" >Про Power Massage</a></li>
+          <li><a href="#" onclick="slowScroll('#home-info')" >Масажі</a></li>
+          <li><a href="#" onclick="slowScroll('#slider-photo')" >Галарея</a></li>
           <li><a href="#" onclick="slowScroll('#contact-info')">Контакти</a></li>
           <li><a href="#" onclick="slowScroll('#testimonials')">Відгуки</a></li>
         </ul>
@@ -30,7 +31,7 @@
       <div class="info-left">
         <h1 class="l-heading"><span class="text-primary">Про</span> Power Massage</h1>
         <p><b>Масаж</b> - прекрасний спосіб розслабитися і зняти напругу.  Сучасний темп життя не залишає часу на повноцінний відпочинок. У результаті навіть найздоровіші люди отримують букет хвороб. Іноді вони зовсім не звертають уваги на перші «дзвіночки». Для багатьох повсякденним явищем стали підвищена стомлюваність, безсоння, головний біль і дратівливість. </p>
-        <p> Але ж здоров'я не безмежне, тому треба вміти вчасно зупинитися і подумати про себе. Найефективнішим рішенням буде масаж. У тебе біль не проходить? Потрібний комплексний підхід! Сила в руках, значний досвід та професія від якої горять очі, те що приносить результат.</p>
+        <p> Але ж здоров'я не безмежне, тому треба вміти вчасно зупинитися і подумати про себе. Найефективнішим рішенням буде масаж. У тебе біль не проходить? Потрібний комплексний підхід! Сила в руках, значний досвід та професія, від якої горять очі, те що приносить результат.</p>
       </div>
       <div class="info-right">
         <img src="./img/PowerMassageTherapy.jpg" alt="Massage">
@@ -146,6 +147,14 @@
       $("header").removeClass("fixed");
     else
       $("header").attr("class", "fixed");
+  });
+
+  $(window).scroll(function(){
+  var sticky = $('#sticky'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 100) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
   });
   </script>
 </body>
