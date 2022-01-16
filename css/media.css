@@ -57,14 +57,31 @@
         float: none;
         width: 100%;
     }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 @media (max-width:500px){
     #testimonials h2{
         line-height: 40px;
     }
+    header ul{
+        display: none;
+    }
+    .menu-mobile{
+        display: block;
+    }
     .info-left h1{
         line-height: 42px;
+    }
+    .slider-wrapper{
+        height: auto;
+        display: flex;
+        align-items: center;
     }
     .container{
         margin: auto;
@@ -73,7 +90,7 @@
         padding: 0 20px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         margin: auto;
         width: 100%;
         align-items: center;
