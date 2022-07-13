@@ -119,7 +119,7 @@
       <h2 class="l-heading">Відгуки</h2>
       <div class="testimonial bg-primary">
         <img src="./img/person-1.jpg" alt="Samantha">
-        <p>Після масажу в мене залишились тільки найкращі враження, по всім пунктам. Мене привітно зустріли, кабінет
+        <p> Після масажу в мене залишились тільки найкращі враження, по всім пунктам. Мене привітно зустріли, кабінет
           затишний та охайний, комфортна температура. Масаж професійний, майстер Тарас ретельно пропрацьовує кожен м'яз,
           дуже уважний до тіла. Масажні рухи не одноманітні. Приємна атмосфера, все чисто і стерильно.</p>
       </div>
@@ -157,7 +157,7 @@
       <p class="size"><a href="#" onclick="slowScroll('#testimonials')">Відгуки</a></p>
     </div>
   </div>
-
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <script>
     let btn = document.querySelector('#btn');
 
@@ -173,7 +173,24 @@
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
-    
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
     function slowScroll(id) {
       $('html, body').animate({
         scrollTop: $(id).offset().top
