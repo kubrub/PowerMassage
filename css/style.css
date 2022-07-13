@@ -1,3 +1,6 @@
+p.indent {
+  text-indent: 30px;
+}
 
 #slider-photo{
   margin-top: 1cm;
@@ -192,7 +195,7 @@ p {
 .py-1 { padding: 10px 0; }
 .py-2 { padding: 20px 0; }
 .py-3 { padding: 20px 0; }
-  
+
 header{
   background: #333;
   color: #fff;
